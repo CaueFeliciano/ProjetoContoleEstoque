@@ -4,50 +4,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    background-color: white;
+    background-image: url("../FrontEnd/imagem/controle\ de\ estoque.png");
+    background-repeat: no-repeat;
+    background-position: -2% 195%;
+}
 
-    background-color: rgb(76, 136, 225);
+body::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
     background-image: 
-    linear-gradient(30deg, rgb(76, 114, 225) 13.5%, transparent 13.5%, transparent 86.5%, rgb(76, 114, 225) 86.5%),
+        linear-gradient(45deg, rgb(106, 145, 212) 25%, transparent 25.5%, transparent 75%, rgb(106, 145, 212) 75%),
+        linear-gradient(-45deg, rgb(52, 86, 139) 25%, transparent 25.5%, transparent 75%, rgb(52, 86, 139) 75%);
 
-    linear-gradient(-30deg, rgb(76, 114, 225) 13.5%, transparent 13.5%, transparent 86.5%, rgb(76, 114, 225) 86.5%),
+    background-size: 80px 80px;
+    background-repeat: repeat;
 
-    linear-gradient(30deg, rgb(76, 183, 225) 13.5%, transparent 13.5%, transparent 86.5%, rgb(76, 183, 225) 86.5%),
-
-    linear-gradient(-30deg, rgb(76, 183, 225) 13.5%, transparent 13.5%, transparent 86.5%, rgb(76, 183, 225) 86.5%),
-
-    linear-gradient(30deg, rgb(76, 114, 225) 13.5%, transparent 13.5%, transparent 86.5%, rgb(76, 114, 225) 86.5%),
-
-    linear-gradient(-30deg, rgb(76, 114, 225) 13.5%, transparent 13.5%, transparent 86.5%, rgb(76, 114, 225) 86.5%),
-
-    linear-gradient(30deg, rgb(76, 183, 225) 13.5%, transparent 13.5%, transparent 86.5%, rgb(76, 183, 225) 86.5%),
-
-    linear-gradient(-30deg, rgb(76, 183, 225) 13.5%, transparent 13.5%, transparent 86.5%, rgb(76, 183, 225) 86.5%),
-
-    linear-gradient(45deg,rgb(27, 155, 191) 25%, transparent 25%, transparent 75%, rgb(27, 155, 191) 75%),
-
-    linear-gradient(45deg,rgb(27, 155, 191) 25%, transparent 25%, transparent 75%, rgb(27, 155, 191) 75%);
-    background-position:
-    0em 4em,
-    0em 4em,
-    4em 8em,
-    4em 8em,
-    8em 4em,
-    8em 4em,
-    12em 8em,
-    12em 8em,
-    0em 0em,
-    4em 4em;
-  background-size:
-    16em 8em,
-    16em 8em,
-    16em 8em,
-    16em 8em,
-    16em 8em,
-    16em 8em,
-    16em 8em,
-    16em 8em,
-    8em 8em,
-    8em 8em;
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: -1;
 }
 
 form {
@@ -56,15 +35,16 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 350px;
-    text-align: center
+    text-align: center;
+    z-index: 10;
+    position: relative;
 }
 
 fieldset {
     display: flex;
     flex-direction: column;
     gap: 10px; 
-    border-radius: 8px;
-    border-width: 3px;
+    border: none;
  }
 
 #info_login{
@@ -105,8 +85,13 @@ fieldset {
     background-color: rgba(0, 183, 255);
     border-radius: 4px;
     border: none;
+    font-family: "Bahnschrift Condensed";
   }
 
 .button:hover{
     background-color: rgb(0, 123, 255);
+}
+
+#login:active{
+    transform: scale(0.95);
 }
