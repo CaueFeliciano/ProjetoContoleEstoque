@@ -10,28 +10,34 @@
   </head>
 
   <body>
-    <div class="padraoBackground"></div>
-
     <form id="LoginForm">
         
-        <h1 id="usuario">usuário</h1>
+        
         
         <fieldset>
+          
+            <h1 id="usuario">usuário</h1>
 
-            <label class="label_input">CPF/CNPJ:</label>
-            
             <input
             id="info_login"
             class="form_input"
             type="text"
-            placeholder="Digite seu CPF/CNPJ"
+            placeholder="CPF/CNPJ:"
             required
             maxlength="14"
             />
+            <input id="senhaLogin"
+            class="form_input"
+            type="password"
+            required
+            placeholder="Senha:"
+            />
+
             
             <button id="login" type="submit" class="button">LOGIN</button>
         
         </fieldset>
     </form>
+    <img id="caminhao" src="../FrontEnd/imagem/caminhão-removebg-preview.png"></img>
   </body>
 </html>
